@@ -9,6 +9,9 @@ class WSSHolder {
 
   @override
   String toString() {
-    return channels.entries.map((e) => e.toString()).toList().toString();
+    return channels.entries
+        .map((e) => '${e.key} ==>> ${e.value.runtimeType}')
+        .toList()
+        .toString();
   }
 }

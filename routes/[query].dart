@@ -13,7 +13,7 @@ Future<Response> onRequest(RequestContext context, String query) async {
 
   final handler = webSocketHandler((channel, protocol) {
     // print(query);
-    WSSHolder.channels.putIfAbsent(_db_type_id, () => channel);
+    WSSHolder.channels[_db_type_id] = channel;
 
     print(const WSSHolder());
 
